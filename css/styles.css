@@ -54,7 +54,6 @@ html {
 .header,
 .site-nav {
   display: flex;
-  align-items: center;
 }
 
 .nav-list {
@@ -70,6 +69,7 @@ html {
 }
 /* Logo */
 .logo {
+  display: flex;
   padding-top: 24px;
   padding-bottom: 24px;
   color: var(--title-text-color);
@@ -80,13 +80,12 @@ html {
   line-height: 1.2;
 }
 /* site-nav */
-
-.nav-list .nav-link {
+.nav-link {
+  display: flex;
   padding-top: 32px;
   padding-bottom: 32px;
   display: inline-block;
   color: var(--title-text-color);
-
   text-decoration: none;
   font-weight: 500;
   letter-spacing: 0.02em;
@@ -94,10 +93,12 @@ html {
   line-height: 1.14;
 }
 .site-nav .curren-link {
+  display: flex;
   color: var(--accent-color);
   text-decoration: none;
   padding-top: 32px;
   padding-bottom: 32px;
+  font-size: 14px;
 }
 /* contact hover */
 .contact-list-footer .link-footer:hover,
@@ -110,6 +111,7 @@ html {
 }
 /* contact-link */
 .contact-list .contact-link {
+  display: flex;
   padding-top: 32px;
   padding-bottom: 32px;
   color: var(--primary-text-color);
@@ -141,7 +143,21 @@ html {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 .hero {
-  background-color: var(--backgraund-hero-and-foter-color);
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/overlay.jpeg);
+  background-color: rgba(47, 48, 58, 0.4);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: scroll;
+  max-width: 1600px;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
   padding-top: 200px;
   padding-bottom: 200px;
@@ -158,12 +174,23 @@ html {
   margin-right: auto;
 }
 /* Benefits */
+.icon-benefits {
+  width: 70px;
+  height: 70px;
+  border: 0;
+  fill: #212121;
+}
+.buttons {
+  width: 270px;
+  height: 120px;
+  background: #f5f4fa;
+  border-radius: 4px;
+  border: transparent;
+  margin-bottom: 30px;
+}
 .benefits-list {
   display: flex;
   align-items: center;
-}
-.benefits {
-  visibility: hidden;
 }
 .benefits-list .subtitle {
   font-weight: 700;
@@ -173,7 +200,7 @@ html {
 }
 .benefits-list .text {
   font-size: 14px;
-  line-height: 1.2;
+  line-height: 1.71;
 }
 .team-list .subtitle,
 .benefits-list .subtitle {
@@ -187,9 +214,16 @@ html {
   text-align: center;
   margin-bottom: 50px;
 }
+.working {
+  padding-bottom: 94px;
+}
 .work-list {
   display: flex;
-  padding-bottom: 94px;
+}
+.work-img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 .work-list .work-item {
   margin-right: 30px;
@@ -206,6 +240,37 @@ html {
   line-height: 1.16;
 }
 /* team */
+.social-gruop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 206px;
+  height: 44px;
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.team-icon {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  cursor: pointer;
+  fill: #afb1b8;
+}
+.team-link {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+}
+.team-link:hover,
+.team-link:focus {
+  color: #ffffff;
+  background-color: #2196f3;
+}
 .team {
   text-align: center;
   margin-bottom: 50px;
@@ -222,6 +287,11 @@ html {
   padding-top: 30px;
   padding-bottom: 30px;
   text-align: center;
+}
+.team-img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 .team-text .subtitle {
   margin-bottom: 10px;
@@ -314,15 +384,18 @@ html {
 .button-list .button:focus {
   background-color: var(--accent-color);
   color: var(--primary-bg-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 /* Galerry */
-.gallery {
-  text-align: center;
-  visibility: hidden;
-}
 .gallery-list {
   display: flex;
   flex-wrap: wrap;
+}
+.gallery-item:focus,
+.gallery-item:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 .gallery-item {
   margin-right: 30px;
@@ -330,7 +403,10 @@ html {
 }
 
 .gallery-item .frame {
-  border: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
+  border-top: 0;
 }
 .gallery-item .foto {
   display: block;
