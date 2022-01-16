@@ -61,7 +61,7 @@ html {
 }
 .contact-list .contact-item + .contact-item,
 .nav-list .nav-item + .nav-item {
-  margin-left: 50px;
+  margin-left: 30px;
 }
 
 .logo-color {
@@ -104,6 +104,7 @@ a.nav-link {
   font-size: 14px;
 }
 /* contact hover */
+.contact-link-icon:hover,
 .contact-list-footer .link-footer:hover,
 .contact-list-footer .link-footer:focus,
 .contact-list .contact-link:hover,
@@ -113,19 +114,17 @@ a.nav-link {
   color: var(--accent-color);
 }
 /* contact-link */
-.contact-list .contact-link {
+.contact-link-icon {
   display: flex;
-  padding-top: 32px;
-  padding-bottom: 32px;
-  color: var(--primary-text-color);
+  color: #757575;
   text-decoration: none;
   font-weight: 500;
-  letter-spacing: 0.02em;
   font-size: 14px;
   line-height: 1.14;
-}
-.contact-link-icon {
-  color: #757575;
+  letter-spacing: 0.02em;
+  align-items: center;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 .contact-link-icon:hover,
 .contact-link-icon:focus,
@@ -135,7 +134,6 @@ a.nav-link {
 }
 .contact-icon-mobile {
   margin-right: 10px;
-  margin-left: 30px;
 }
 .contact-icon-mail {
   margin-right: 10px;
@@ -175,18 +173,20 @@ a.nav-link {
     ),
     url(../images/overlay.jpeg);
   background-color: rgba(47, 48, 58, 0.4);
-  background-position: center;
-  background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: scroll;
-  max-width: 1600px;
-  height: 600px;
-  margin-left: auto;
-  margin-right: auto;
+  background-repeat: no-repeat;
+
   text-align: center;
   padding-top: 200px;
   padding-bottom: 200px;
+
+  max-width: 1600px;
+  height: 600px;
 }
+.hero > .container {
+  width: 696px;
+}
+
 .hero-title {
   color: var(--primary-bg-color);
   font-weight: 900;
@@ -194,9 +194,6 @@ a.nav-link {
   line-height: 1.36;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  width: 696px;
-  margin-left: auto;
-  margin-right: auto;
 }
 /* Benefits */
 .icon-benefits {
@@ -363,8 +360,11 @@ a.team-link:focus {
   align-items: center;
   fill: currentColor;
   cursor: pointer;
+  margin: 16px 32px;
 }
 .clients {
+  display: flex;
+  align-items: center;
   width: 170px;
   height: 92px;
   border: 1px solid #afb1b8;
@@ -379,7 +379,7 @@ a.team-link:focus {
   color: var(--accent-color);
   border-color: var(--accent-color);
 }
-button.clients.list:nth-child(6n) {
+.clients:nth-child(6n) {
   margin-right: 0;
 }
 /* addres */
@@ -415,6 +415,9 @@ button.clients.list:nth-child(6n) {
 }
 .social-footer {
   width: 206px;
+  margin-left: 70px;
+  margin-top: 12px;
+  margin-bottom: 100px;
 }
 .footer-icon {
   width: 20px;
@@ -459,6 +462,9 @@ a.social-footer-link:nth-child(4n) {
   line-height: 1.2;
   display: inline-block;
   margin-bottom: 20px;
+}
+.addres-list {
+  display: flex;
 }
 
 /* Portfolio */
